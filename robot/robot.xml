@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <!-- Generated using onshape-to-robot -->
 <!-- Onshape https://cad.onshape.com/documents/d7eef6374aced10980d655e0/w/a95c1ea2fcec3b2e30db9b5b/e/12a2a0fd368dedeacabed258 -->
-<mujoco model="C:\Users\benro\Repositories\dev\mujoco-rl\robot">
+<mujoco model="robot">
   <compiler angle="radian" meshdir="assets" autolimits="true"/>
   <default>
-    <default class="C:\Users\benro\Repositories\dev\mujoco-rl\robot">
+    <default class="robot">
       <joint frictionloss="0.1" armature="0.005"/>
       <position kp="50" dampratio="1"/>
       <default class="visual">
@@ -17,20 +17,20 @@
   </default>
   <worldbody>
     <!-- Link body -->
-    <body name="body" pos="0 0 0" quat="1 0 0 0" childclass="C:\Users\benro\Repositories\dev\mujoco-rl\robot">
+    <body name="body" pos="0 0 0" quat="1 0 0 0" childclass="robot">
       <freejoint name="body_freejoint"/>
-      <inertial pos="-0.000143921 -7.35376e-05 -1.41585e-05" mass="0.128457" fullinertia="3.43693e-05 0.000188026 0.000180806 0 0 8.1445e-08"/>
+      <inertial pos="1.60791e-05 -0.000291688 4.34745e-05" mass="0.128457" fullinertia="3.43693e-05 0.000188026 0.000180806 0 0 8.1445e-08"/>
       <!-- Part mg996r -->
-      <geom type="mesh" class="visual" pos="0.0373561 0.0202059 0.0203008" quat="0.5 0.5 0.5 -0.5" mesh="mg996r" material="mg996r_material"/>
-      <geom type="mesh" class="collision" pos="0.0373561 0.0202059 0.0203008" quat="0.5 0.5 0.5 -0.5" mesh="mg996r" material="mg996r_material"/>
+      <geom type="mesh" class="visual" pos="0.0375161 0.0199877 0.0203585" quat="0.5 0.5 0.5 -0.5" mesh="mg996r" material="mg996r_material"/>
+      <geom type="mesh" class="collision" pos="0.0375161 0.0199877 0.0203585" quat="0.5 0.5 0.5 -0.5" mesh="mg996r" material="mg996r_material"/>
       <!-- Part body -->
-      <geom type="mesh" class="visual" pos="-0.000143921 -0.00378818 -0.0275483" quat="1 0 0 0" mesh="body" material="body_material"/>
-      <geom type="mesh" class="collision" pos="-0.000143921 -0.00378818 -0.0275483" quat="1 0 0 0" mesh="body" material="body_material"/>
+      <geom type="mesh" class="visual" pos="1.60791e-05 -0.00400633 -0.0274906" quat="1 0 0 0" mesh="body" material="body_material"/>
+      <geom type="mesh" class="collision" pos="1.60791e-05 -0.00400633 -0.0274906" quat="1 0 0 0" mesh="body" material="body_material"/>
       <!-- Part mg996r_2 -->
-      <geom type="mesh" class="visual" pos="-0.0376439 0.0202059 0.0203008" quat="0.5 0.5 0.5 -0.5" mesh="mg996r" material="mg996r_material"/>
-      <geom type="mesh" class="collision" pos="-0.0376439 0.0202059 0.0203008" quat="0.5 0.5 0.5 -0.5" mesh="mg996r" material="mg996r_material"/>
+      <geom type="mesh" class="visual" pos="-0.0374839 0.0199877 0.0203585" quat="0.5 0.5 0.5 -0.5" mesh="mg996r" material="mg996r_material"/>
+      <geom type="mesh" class="collision" pos="-0.0374839 0.0199877 0.0203585" quat="0.5 0.5 0.5 -0.5" mesh="mg996r" material="mg996r_material"/>
       <!-- Link leg_hip_l -->
-      <body name="leg_hip_l" pos="0.0373561 -0.0197882 0.00995174" quat="0.5 -0.5 0.5 0.5">
+      <body name="leg_hip_l" pos="0.0375161 -0.0200063 0.0100094" quat="0.5 -0.5 0.5 0.5">
         <!-- Joint from body to leg_hip_l -->
         <joint axis="0 0 1" name="hip1-l" type="hinge" range="-1.5707963267949 1.570796326794893"/>
         <inertial pos="0.0168278 -0.00558285 -0.0185862" mass="0.0633239" fullinertia="9.5947e-06 1.46442e-05 1.84718e-05 8.7959e-08 4.02355e-07 -2.065e-08"/>
@@ -46,33 +46,33 @@
         <!-- Link leg_upper_l -->
         <body name="leg_upper_l" pos="0.0275 -0.026 -0.01975" quat="0 -0 -0.707107 -0.707107">
           <!-- Joint from leg_hip_l to leg_upper_l -->
-          <joint axis="0 0 1" name="hip2-l" type="hinge" range="-0.8707879321370626 2.2708047214527305"/>
-          <inertial pos="-0.0585582 0.0488471 -0.00253348" mass="0.0743473" fullinertia="4.00057e-05 5.32222e-05 7.93556e-05 3.59925e-05 3.13931e-06 -2.82927e-06"/>
+          <joint axis="0 0 1" name="hip2-l" type="hinge" range="-0.5217220817381962 2.619870571851597"/>
+          <inertial pos="-0.0383201 0.0659294 -0.00253348" mass="0.0743473" fullinertia="6.46873e-05 2.85406e-05 7.93556e-05 3.18196e-05 1.98232e-06 -3.73235e-06"/>
           <!-- Part mg996r_4 -->
-          <geom type="mesh" class="visual" pos="-0.0851639 0.0717338 0.018244" quat="0 0.939371 -0.342902 -0" mesh="mg996r" material="mg996r_material"/>
-          <geom type="mesh" class="collision" pos="-0.0851639 0.0717338 0.018244" quat="0 0.939371 -0.342902 -0" mesh="mg996r" material="mg996r_material"/>
+          <geom type="mesh" class="visual" pos="-0.0554935 0.0965355 0.018244" quat="0 -0.865556 0.500812 0" mesh="mg996r" material="mg996r_material"/>
+          <geom type="mesh" class="collision" pos="-0.0554935 0.0965355 0.018244" quat="0 -0.865556 0.500812 0" mesh="mg996r" material="mg996r_material"/>
           <!-- Part mg996r_straight_2 -->
-          <geom type="mesh" class="visual" pos="0 0 -0.00575" quat="0.641137 0.641137 0.298235 0.298235" mesh="mg996r_straight" material="mg996r_straight_material"/>
-          <geom type="mesh" class="collision" pos="0 0 -0.00575" quat="0.641137 0.641137 0.298235 0.298235" mesh="mg996r_straight" material="mg996r_straight_material"/>
+          <geom type="mesh" class="visual" pos="0 0 -0.00575" quat="0.683184 0.683184 0.182372 0.182372" mesh="mg996r_straight" material="mg996r_straight_material"/>
+          <geom type="mesh" class="collision" pos="0 0 -0.00575" quat="0.683184 0.683184 0.182372 0.182372" mesh="mg996r_straight" material="mg996r_straight_material"/>
           <!-- Part leg_upper_l -->
-          <geom type="mesh" class="visual" pos="0 0 -0.00575" quat="0.664236 0.242468 0.664236 -0.242468" mesh="leg_upper_l" material="leg_upper_l_material"/>
-          <geom type="mesh" class="collision" pos="0 0 -0.00575" quat="0.664236 0.242468 0.664236 -0.242468" mesh="leg_upper_l" material="leg_upper_l_material"/>
+          <geom type="mesh" class="visual" pos="0 0 -0.00575" quat="0.61204 0.354128 0.61204 -0.354128" mesh="leg_upper_l" material="leg_upper_l_material"/>
+          <geom type="mesh" class="collision" pos="0 0 -0.00575" quat="0.61204 0.354128 0.61204 -0.354128" mesh="leg_upper_l" material="leg_upper_l_material"/>
           <!-- Link leg_lower_l -->
-          <body name="leg_lower_l" pos="-0.0772485 0.0650666 -0.02175" quat="0.939371 -0 0 -0.342902">
+          <body name="leg_lower_l" pos="-0.0503358 0.0875632 -0.02175" quat="0.865556 0 0 -0.500812">
             <!-- Joint from leg_upper_l to leg_lower_l -->
-            <joint axis="0 0 1" name="knee-l" type="hinge" range="-1.4000463710821598 1.7415462825076333"/>
-            <inertial pos="-0.0163287 -0.0946982 -0.00588184" mass="0.109055" fullinertia="0.000324247 1.96233e-05 0.000336642 -5.41355e-05 6.62589e-07 3.84267e-06"/>
+            <joint axis="0 0 1" name="knee-l" type="hinge" range="-1.4000463710821596 1.7415462825076335"/>
+            <inertial pos="-0.024134 -0.106838 -0.0059757" mass="0.134801" fullinertia="0.000432979 5.69911e-05 0.000483077 -0.000106639 7.27547e-07 3.21149e-06"/>
             <!-- Part leg_lower_l -->
             <geom type="mesh" class="visual" pos="-0 -0 -0.00575" quat="0.540815 -0.455543 0.540815 0.455543" mesh="leg_lower_l" material="leg_lower_l_material"/>
             <geom type="mesh" class="collision" pos="-0 -0 -0.00575" quat="0.540815 -0.455543 0.540815 0.455543" mesh="leg_lower_l" material="leg_lower_l_material"/>
             <!-- Part mg996r_straight_3 -->
-            <geom type="mesh" class="visual" pos="-0 0 -0.00575" quat="0.0602959 0.0602959 0.704531 0.704531" mesh="mg996r_straight" material="mg996r_straight_material"/>
-            <geom type="mesh" class="collision" pos="-0 0 -0.00575" quat="0.0602959 0.0602959 0.704531 0.704531" mesh="mg996r_straight" material="mg996r_straight_material"/>
+            <geom type="mesh" class="visual" pos="0 0 -0.00575" quat="0.0602959 0.0602959 0.704531 0.704531" mesh="mg996r_straight" material="mg996r_straight_material"/>
+            <geom type="mesh" class="collision" pos="0 0 -0.00575" quat="0.0602959 0.0602959 0.704531 0.704531" mesh="mg996r_straight" material="mg996r_straight_material"/>
           </body>
         </body>
       </body>
       <!-- Link leg_hip_r -->
-      <body name="leg_hip_r" pos="-0.0376439 -0.0197882 0.00995174" quat="0.5 -0.5 0.5 0.5">
+      <body name="leg_hip_r" pos="-0.0374839 -0.0200063 0.0100094" quat="0.5 -0.5 0.5 0.5">
         <!-- Joint from body to leg_hip_r -->
         <joint axis="0 0 1" name="hip1-r" type="hinge" range="-1.5707963267948974 1.5707963267948957"/>
         <inertial pos="0.0168278 0.00558285 -0.0185862" mass="0.0633239" fullinertia="9.5947e-06 1.46442e-05 1.84718e-05 -8.7959e-08 4.02355e-07 2.065e-08"/>
@@ -88,43 +88,43 @@
         <!-- Link leg_upper_r -->
         <body name="leg_upper_r" pos="0.0275 0.026 -0.01975" quat="0 -0 0.707107 -0.707107">
           <!-- Joint from leg_hip_r to leg_upper_r -->
-          <joint axis="0 0 1" name="hip2-r" type="hinge" range="-2.270804721452733 0.87078793213706"/>
-          <inertial pos="-0.0585582 -0.0488471 -0.00253348" mass="0.0743473" fullinertia="4.00057e-05 5.32222e-05 7.93556e-05 -3.59925e-05 3.13931e-06 2.82927e-06"/>
+          <joint axis="0 0 1" name="hip2-r" type="hinge" range="-2.619870571851599 0.521722081738194"/>
+          <inertial pos="-0.0383201 -0.0659294 -0.00253348" mass="0.0743473" fullinertia="6.46873e-05 2.85406e-05 7.93556e-05 -3.18196e-05 1.98232e-06 3.73235e-06"/>
           <!-- Part mg996r_straight_5 -->
-          <geom type="mesh" class="visual" pos="-0 -0 -0.00575" quat="0.298235 0.298235 0.641137 0.641137" mesh="mg996r_straight" material="mg996r_straight_material"/>
-          <geom type="mesh" class="collision" pos="-0 -0 -0.00575" quat="0.298235 0.298235 0.641137 0.641137" mesh="mg996r_straight" material="mg996r_straight_material"/>
+          <geom type="mesh" class="visual" pos="-0 0 -0.00575" quat="0.182372 0.182372 0.683184 0.683184" mesh="mg996r_straight" material="mg996r_straight_material"/>
+          <geom type="mesh" class="collision" pos="-0 0 -0.00575" quat="0.182372 0.182372 0.683184 0.683184" mesh="mg996r_straight" material="mg996r_straight_material"/>
           <!-- Part mg996r_6 -->
-          <geom type="mesh" class="visual" pos="-0.0851639 -0.0717338 0.018244" quat="0 -0.939371 -0.342902 0" mesh="mg996r" material="mg996r_material"/>
-          <geom type="mesh" class="collision" pos="-0.0851639 -0.0717338 0.018244" quat="0 -0.939371 -0.342902 0" mesh="mg996r" material="mg996r_material"/>
+          <geom type="mesh" class="visual" pos="-0.0554935 -0.0965355 0.018244" quat="0 -0.865556 -0.500812 0" mesh="mg996r" material="mg996r_material"/>
+          <geom type="mesh" class="collision" pos="-0.0554935 -0.0965355 0.018244" quat="0 -0.865556 -0.500812 0" mesh="mg996r" material="mg996r_material"/>
           <!-- Part leg_upper_r -->
-          <geom type="mesh" class="visual" pos="0 0 -0.00105" quat="0.242468 -0.664236 -0.242468 -0.664236" mesh="leg_upper_r" material="leg_upper_r_material"/>
-          <geom type="mesh" class="collision" pos="0 0 -0.00105" quat="0.242468 -0.664236 -0.242468 -0.664236" mesh="leg_upper_r" material="leg_upper_r_material"/>
+          <geom type="mesh" class="visual" pos="-0 0 -0.00105" quat="0.354128 -0.61204 -0.354128 -0.61204" mesh="leg_upper_r" material="leg_upper_r_material"/>
+          <geom type="mesh" class="collision" pos="-0 0 -0.00105" quat="0.354128 -0.61204 -0.354128 -0.61204" mesh="leg_upper_r" material="leg_upper_r_material"/>
           <!-- Link leg_lower_r -->
-          <body name="leg_lower_r" pos="-0.0772485 -0.0650666 -0.02175" quat="0.939371 0 0 0.342902">
+          <body name="leg_lower_r" pos="-0.0503358 -0.0875632 -0.02175" quat="0.865556 0 0 0.500812">
             <!-- Joint from leg_upper_r to leg_lower_r -->
             <joint axis="0 0 1" name="knee-r" type="hinge" range="-1.7396400345894953 1.4019526190002978"/>
-            <inertial pos="-0.0161481 0.0947291 -0.00588181" mass="0.109055" fullinertia="0.000324452 1.9418e-05 0.000336642 5.35545e-05 6.55243e-07 -3.84393e-06"/>
+            <inertial pos="-0.0239303 0.106884 -0.00597575" mass="0.134801" fullinertia="0.000433384 5.65859e-05 0.000483077 0.000105921 7.21484e-07 -3.21313e-06"/>
             <!-- Part leg_lower_r -->
-            <geom type="mesh" class="visual" pos="-0 0 0.06095" quat="0.456058 0.54038 -0.456058 0.54038" mesh="leg_lower_r" material="leg_lower_r_material"/>
-            <geom type="mesh" class="collision" pos="-0 0 0.06095" quat="0.456058 0.54038 -0.456058 0.54038" mesh="leg_lower_r" material="leg_lower_r_material"/>
+            <geom type="mesh" class="visual" pos="-0 0 0.04895" quat="0.456058 0.54038 -0.456058 0.54038" mesh="leg_lower_r" material="leg_lower_r_material"/>
+            <geom type="mesh" class="collision" pos="-0 0 0.04895" quat="0.456058 0.54038 -0.456058 0.54038" mesh="leg_lower_r" material="leg_lower_r_material"/>
             <!-- Part mg996r_straight_6 -->
-            <geom type="mesh" class="visual" pos="0 0 -0.00575" quat="0.704588 0.704588 0.0596244 0.0596244" mesh="mg996r_straight" material="mg996r_straight_material"/>
-            <geom type="mesh" class="collision" pos="0 0 -0.00575" quat="0.704588 0.704588 0.0596244 0.0596244" mesh="mg996r_straight" material="mg996r_straight_material"/>
+            <geom type="mesh" class="visual" pos="0 -0 -0.00575" quat="0.704588 0.704588 0.0596244 0.0596244" mesh="mg996r_straight" material="mg996r_straight_material"/>
+            <geom type="mesh" class="collision" pos="0 -0 -0.00575" quat="0.704588 0.704588 0.0596244 0.0596244" mesh="mg996r_straight" material="mg996r_straight_material"/>
           </body>
         </body>
       </body>
     </body>
   </worldbody>
   <asset>
+    <mesh file="leg_upper_l.stl"/>
+    <mesh file="leg_hip_r.stl"/>
+    <mesh file="leg_upper_r.stl"/>
+    <mesh file="mg996r.stl"/>
+    <mesh file="leg_hip_l.stl"/>
+    <mesh file="leg_lower_r.stl"/>
+    <mesh file="body.stl"/>
     <mesh file="mg996r_straight.stl"/>
     <mesh file="leg_lower_l.stl"/>
-    <mesh file="leg_hip_l.stl"/>
-    <mesh file="leg_hip_r.stl"/>
-    <mesh file="mg996r.stl"/>
-    <mesh file="leg_lower_r.stl"/>
-    <mesh file="leg_upper_r.stl"/>
-    <mesh file="leg_upper_l.stl"/>
-    <mesh file="body.stl"/>
     <material name="mg996r_material" rgba="0.301961 0.301961 0.301961 1"/>
     <material name="body_material" rgba="0.615686 0.811765 0.929412 1"/>
     <material name="mg996r_straight_material" rgba="0.439216 0.47451 0.501961 1"/>
@@ -136,12 +136,12 @@
     <material name="leg_lower_r_material" rgba="0.615686 0.811765 0.929412 1"/>
   </asset>
   <actuator>
-    <position class="C:\Users\benro\Repositories\dev\mujoco-rl\robot" name="hip1-l" joint="hip1-l" inheritrange="1"/>
-    <position class="C:\Users\benro\Repositories\dev\mujoco-rl\robot" name="hip2-l" joint="hip2-l" inheritrange="1"/>
-    <position class="C:\Users\benro\Repositories\dev\mujoco-rl\robot" name="knee-l" joint="knee-l" inheritrange="1"/>
-    <position class="C:\Users\benro\Repositories\dev\mujoco-rl\robot" name="hip1-r" joint="hip1-r" inheritrange="1"/>
-    <position class="C:\Users\benro\Repositories\dev\mujoco-rl\robot" name="hip2-r" joint="hip2-r" inheritrange="1"/>
-    <position class="C:\Users\benro\Repositories\dev\mujoco-rl\robot" name="knee-r" joint="knee-r" inheritrange="1"/>
+    <position class="robot" name="hip1-l" joint="hip1-l" inheritrange="1"/>
+    <position class="robot" name="hip2-l" joint="hip2-l" inheritrange="1"/>
+    <position class="robot" name="knee-l" joint="knee-l" inheritrange="1"/>
+    <position class="robot" name="hip1-r" joint="hip1-r" inheritrange="1"/>
+    <position class="robot" name="hip2-r" joint="hip2-r" inheritrange="1"/>
+    <position class="robot" name="knee-r" joint="knee-r" inheritrange="1"/>
   </actuator>
   <equality/>
 </mujoco>
