@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "d7eef6374aced10980d655e0",
+    "documentMicroversion": "3faf877441f157e5a061633e",
+    "elementId": "80ce15f447962857bcde504b",
+    "fullConfiguration": "default",
+    "id": "MrvIIsfHkYyMyQg32",
+    "isStandardContent": false,
+    "name": "ESP32-30pin PCB <1>",
+    "partId": "JFX",
+    "suppressed": false,
+    "type": "Part"
+}

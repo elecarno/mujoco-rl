@@ -1,0 +1,145 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape https://cad.onshape.com/documents/d7eef6374aced10980d655e0/w/a95c1ea2fcec3b2e30db9b5b/e/d4f0ac28893840637e82be16 -->
+<mujoco model="arm">
+  <compiler angle="radian" meshdir="assets" autolimits="true"/>
+  <default>
+    <default class="arm">
+      <joint frictionloss="0.1" armature="0.005"/>
+      <position kp="50" dampratio="1"/>
+      <default class="visual">
+        <geom type="mesh" contype="0" conaffinity="0" group="2"/>
+      </default>
+      <default class="collision">
+        <geom group="3"/>
+      </default>
+    </default>
+  </default>
+  <worldbody>
+    <!-- Link base -->
+    <body name="base" pos="0 0 0" quat="1 0 0 0" childclass="arm">
+      <inertial pos="-0.00475826 -0.00396384 0.0209439" mass="0.523843" fullinertia="0.000693325 0.000707368 0.00121115 1.88407e-05 -7.36162e-06 1.10204e-05"/>
+      <!-- Part base -->
+      <geom type="mesh" class="visual" pos="0 0 0" quat="1 0 0 0" mesh="base" material="base_material"/>
+      <geom type="mesh" class="collision" pos="0 0 0" quat="1 0 0 0" mesh="base" material="base_material"/>
+      <!-- Part mg996r -->
+      <geom type="mesh" class="visual" pos="-0 0.0103491 0.00400596" quat="0.707107 0 0 -0.707107" mesh="mg996r" material="mg996r_material"/>
+      <geom type="mesh" class="collision" pos="-0 0.0103491 0.00400596" quat="0.707107 0 0 -0.707107" mesh="mg996r" material="mg996r_material"/>
+      <!-- Link seg1 -->
+      <body name="seg1" pos="-0 -0 0.044" quat="0 1 0 0">
+        <!-- Joint from base to seg1 -->
+        <joint axis="0 0 1" name="base" type="hinge" range="-1.5707963267948966 1.5707963267948966"/>
+        <inertial pos="-0.00158193 0.00470879 -0.0216215" mass="0.217572" fullinertia="0.000126522 0.000160698 0.000191501 -3.68904e-06 -1.17664e-06 -3.20072e-06"/>
+        <!-- Part mg966r_circular -->
+        <geom type="mesh" class="visual" pos="-0 0 -0.00575" quat="0.707107 0.707107 -0 -0" mesh="mg966r_circular" material="mg966r_circular_material"/>
+        <geom type="mesh" class="collision" pos="-0 0 -0.00575" quat="0.707107 0.707107 -0 -0" mesh="mg966r_circular" material="mg966r_circular_material"/>
+        <!-- Part mg996r_2 -->
+        <geom type="mesh" class="visual" pos="-0.017994 0 -0.0557491" quat="0 0.707107 -0 0.707107" mesh="mg996r" material="mg996r_material"/>
+        <geom type="mesh" class="collision" pos="-0.017994 0 -0.0557491" quat="0 0.707107 -0 0.707107" mesh="mg996r" material="mg996r_material"/>
+        <!-- Part seg1 -->
+        <geom type="mesh" class="visual" pos="0 -0 -0.0034" quat="0 1 -0 -0" mesh="seg1" material="seg1_material"/>
+        <geom type="mesh" class="collision" pos="0 -0 -0.0034" quat="0 1 -0 -0" mesh="seg1" material="seg1_material"/>
+        <!-- Link seg2 -->
+        <body name="seg2" pos="0.022 -0 -0.0454" quat="0.5 0.5 -0.5 -0.5">
+          <!-- Joint from seg1 to seg2 -->
+          <joint axis="0 0 1" name="shoulder" type="hinge" range="-1.5707963267948903 1.5707963267949028"/>
+          <inertial pos="-0.000635037 -0.124717 0.0226148" mass="0.198404" fullinertia="0.000913712 0.000126938 0.000814582 -7.62544e-06 -7.33369e-07 -1.25352e-05"/>
+          <!-- Part seg2 -->
+          <geom type="mesh" class="visual" pos="-0 -0 -0.0034" quat="0.5 0.5 0.5 -0.5" mesh="seg2" material="seg2_material"/>
+          <geom type="mesh" class="collision" pos="-0 -0 -0.0034" quat="0.5 0.5 0.5 -0.5" mesh="seg2" material="seg2_material"/>
+          <!-- Part mg966r_circular_2 -->
+          <geom type="mesh" class="visual" pos="0 0 -0.00575" quat="0.707107 0.707107 -0 0" mesh="mg966r_circular" material="mg966r_circular_material"/>
+          <geom type="mesh" class="collision" pos="0 0 -0.00575" quat="0.707107 0.707107 -0 0" mesh="mg966r_circular" material="mg966r_circular_material"/>
+          <!-- Part mg996r_3 -->
+          <geom type="mesh" class="visual" pos="-0 -0.204349 0.00400596" quat="0.707107 -0 -0 0.707107" mesh="mg996r" material="mg996r_material"/>
+          <geom type="mesh" class="collision" pos="-0 -0.204349 0.00400596" quat="0.707107 -0 -0 0.707107" mesh="mg996r" material="mg996r_material"/>
+          <!-- Link seg3 -->
+          <body name="seg3" pos="-0 -0.194 0.044" quat="0 0 1 0">
+            <!-- Joint from seg2 to seg3 -->
+            <joint axis="0 0 1" name="elbow" type="hinge" range="-1.5707963267948983 1.5707963267948948"/>
+            <inertial pos="0.000745086 -0.109635 0.0171015" mass="0.189668" fullinertia="0.000626272 9.60096e-05 0.00055682 6.11994e-06 5.76826e-07 -2.24218e-05"/>
+            <!-- Part mg996r_4 -->
+            <geom type="mesh" class="visual" pos="-0 -0.172349 0.00200596" quat="0.707107 -0 -0 0.707107" mesh="mg996r" material="mg996r_material"/>
+            <geom type="mesh" class="collision" pos="-0 -0.172349 0.00200596" quat="0.707107 -0 -0 0.707107" mesh="mg996r" material="mg996r_material"/>
+            <!-- Part mg966r_circular_3 -->
+            <geom type="mesh" class="visual" pos="0 0 -0.00575" quat="0.707107 0.707107 0 -0" mesh="mg966r_circular" material="mg966r_circular_material"/>
+            <geom type="mesh" class="collision" pos="0 0 -0.00575" quat="0.707107 0.707107 0 -0" mesh="mg966r_circular" material="mg966r_circular_material"/>
+            <!-- Part seg3 -->
+            <geom type="mesh" class="visual" pos="-0 -0 -0.0034" quat="0.5 0.5 -0.5 0.5" mesh="seg3" material="seg3_material"/>
+            <geom type="mesh" class="collision" pos="-0 -0 -0.0034" quat="0.5 0.5 -0.5 0.5" mesh="seg3" material="seg3_material"/>
+            <!-- Link seg4 -->
+            <body name="seg4" pos="-0 -0.162 0.042" quat="0 0 1 -0">
+              <!-- Joint from seg3 to seg4 -->
+              <joint axis="0 0 1" name="wrist" type="hinge" range="-1.5707963267948957 1.5707963267948974"/>
+              <inertial pos="-0.00124317 -0.0623669 0.00794801" mass="0.0960033" fullinertia="6.0761e-05 2.70603e-05 4.56639e-05 -3.79352e-07 3.77811e-07 7.6514e-06"/>
+              <!-- Part mg966r_circular_4 -->
+              <geom type="mesh" class="visual" pos="0 0 -0.00575" quat="0.707107 0.707107 -0 0" mesh="mg966r_circular" material="mg966r_circular_material"/>
+              <geom type="mesh" class="collision" pos="0 0 -0.00575" quat="0.707107 0.707107 -0 0" mesh="mg966r_circular" material="mg966r_circular_material"/>
+              <!-- Part seg4 -->
+              <geom type="mesh" class="visual" pos="-0 -0 -0.0034" quat="0.5 0.5 0.5 -0.5" mesh="seg4" material="seg4_material"/>
+              <geom type="mesh" class="collision" pos="-0 -0 -0.0034" quat="0.5 0.5 0.5 -0.5" mesh="seg4" material="seg4_material"/>
+              <!-- Part mg996r_5 -->
+              <geom type="mesh" class="visual" pos="-0 -0.052006 0.0303491" quat="0.5 0.5 0.5 -0.5" mesh="mg996r" material="mg996r_material"/>
+              <geom type="mesh" class="collision" pos="-0 -0.052006 0.0303491" quat="0.5 0.5 0.5 -0.5" mesh="mg996r" material="mg996r_material"/>
+              <!-- Link hand -->
+              <body name="hand" pos="-0 -0.092 0.02" quat="0.5 -0.5 0.5 0.5">
+                <!-- Joint from seg4 to hand -->
+                <joint axis="0 0 1" name="twist" type="hinge" range="-1.5707963267948957 1.5707963267948974"/>
+                <inertial pos="-0.00126212 0.00138788 -0.00795851" mass="0.00672512" fullinertia="7.14627e-07 9.01745e-07 1.1501e-06 3.9147e-08 -6.9336e-08 8.2461e-08"/>
+                <!-- Part sg90_body -->
+                <geom type="mesh" class="visual" pos="-0.0051 0.0196 -0.0154" quat="0 -1 0 -0" mesh="sg90_body" material="sg90_body_material"/>
+                <geom type="mesh" class="collision" pos="-0.0051 0.0196 -0.0154" quat="0 -1 0 -0" mesh="sg90_body" material="sg90_body_material"/>
+                <!-- Part hand -->
+                <geom type="mesh" class="visual" pos="0 -0 -0.0034" quat="0 0.707107 0.707107 0" mesh="hand" material="hand_material"/>
+                <geom type="mesh" class="collision" pos="0 -0 -0.0034" quat="0 0.707107 0.707107 0" mesh="hand" material="hand_material"/>
+                <!-- Part mg966r_circular_5 -->
+                <geom type="mesh" class="visual" pos="-0 0 -0.00575" quat="0.707107 0.707107 -0 -0" mesh="mg966r_circular" material="mg966r_circular_material"/>
+                <geom type="mesh" class="collision" pos="-0 0 -0.00575" quat="0.707107 0.707107 -0 -0" mesh="mg966r_circular" material="mg966r_circular_material"/>
+                <!-- Link gripper_r -->
+                <body name="gripper_r" pos="-0.0102 -0.007 -0.0154" quat="0.707107 -0.707107 0 -0">
+                  <!-- Joint from hand to gripper_r -->
+                  <joint axis="0 0 1" name="grip" type="hinge"/>
+                  <inertial pos="-0.00179124 0.0125887 -0.002" mass="0.00100024" fullinertia="1.17587e-07 6.49e-09 1.2141e-07 9.055e-09 -0 -0"/>
+                  <!-- Part gripper_r -->
+                  <geom type="mesh" class="visual" pos="0.02 0 -0" quat="0 1 0 0" mesh="gripper_r" material="gripper_r_material"/>
+                  <geom type="mesh" class="collision" pos="0.02 0 -0" quat="0 1 0 0" mesh="gripper_r" material="gripper_r_material"/>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <asset>
+    <mesh file="seg2.stl"/>
+    <mesh file="seg3.stl"/>
+    <mesh file="seg4.stl"/>
+    <mesh file="mg966r_circular.stl"/>
+    <mesh file="sg90_body.stl"/>
+    <mesh file="seg1.stl"/>
+    <mesh file="base.stl"/>
+    <mesh file="mg996r.stl"/>
+    <mesh file="gripper_r.stl"/>
+    <mesh file="hand.stl"/>
+    <material name="base_material" rgba="0.615686 0.811765 0.929412 1"/>
+    <material name="mg996r_material" rgba="0.301961 0.301961 0.301961 1"/>
+    <material name="mg966r_circular_material" rgba="0.439216 0.47451 0.501961 1"/>
+    <material name="seg1_material" rgba="0.615686 0.811765 0.929412 1"/>
+    <material name="seg2_material" rgba="0.615686 0.811765 0.929412 1"/>
+    <material name="seg3_material" rgba="0.615686 0.811765 0.929412 1"/>
+    <material name="seg4_material" rgba="0.615686 0.811765 0.929412 1"/>
+    <material name="sg90_body_material" rgba="0 0 0.752941 1"/>
+    <material name="hand_material" rgba="0.615686 0.811765 0.929412 1"/>
+    <material name="gripper_r_material" rgba="0.615686 0.811765 0.929412 1"/>
+  </asset>
+  <actuator>
+    <position class="arm" name="base" joint="base" inheritrange="1"/>
+    <position class="arm" name="shoulder" joint="shoulder" inheritrange="1"/>
+    <position class="arm" name="elbow" joint="elbow" inheritrange="1"/>
+    <position class="arm" name="wrist" joint="wrist" inheritrange="1"/>
+    <position class="arm" name="twist" joint="twist" inheritrange="1"/>
+    <position class="arm" name="grip" joint="grip"/>
+  </actuator>
+  <equality/>
+</mujoco>

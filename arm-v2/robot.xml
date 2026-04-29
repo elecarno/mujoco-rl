@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape https://cad.onshape.com/documents/d7eef6374aced10980d655e0/w/a95c1ea2fcec3b2e30db9b5b/e/12aff9f8c85b1001f549e1c3 -->
+<mujoco model="arm-v2">
+  <compiler angle="radian" meshdir="assets" autolimits="true"/>
+  <default>
+    <default class="arm-v2">
+      <joint frictionloss="0.1" armature="0.005"/>
+      <position kp="50" dampratio="1"/>
+      <default class="visual">
+        <geom type="mesh" contype="0" conaffinity="0" group="2"/>
+      </default>
+      <default class="collision">
+        <geom group="3"/>
+      </default>
+    </default>
+  </default>
+  <worldbody>
+    <!-- Link arm_v2_base -->
+    <body name="arm_v2_base" pos="0 0 0" quat="1 0 0 0" childclass="arm-v2">
+      <inertial pos="-0.00011185 -0.00411539 0.0186454" mass="0.321592" fullinertia="0.000521649 0.000533747 0.000934241 -1.79989e-07 -7.3706e-08 4.20077e-06"/>
+      <!-- Part mg996r -->
+      <geom type="mesh" class="visual" pos="0 0.0103491 0.00400596" quat="0.707107 0 -0 -0.707107" mesh="mg996r" material="mg996r_material"/>
+      <geom type="mesh" class="collision" pos="0 0.0103491 0.00400596" quat="0.707107 0 -0 -0.707107" mesh="mg996r" material="mg996r_material"/>
+      <!-- Part base -->
+      <geom type="mesh" class="visual" pos="0 0 0" quat="1 0 0 0" mesh="base" material="base_material"/>
+      <geom type="mesh" class="collision" pos="0 0 0" quat="1 0 0 0" mesh="base" material="base_material"/>
+      <!-- Part pinheader_1x15_p254mm_vertical -->
+      <geom type="mesh" class="visual" pos="-0.00010701 0.058192 0.00955" quat="0 0.707107 0.707107 -0" mesh="pinheader_1x15_p254mm_vertical" material="pinheader_1x15_p254mm_vertical_material"/>
+      <geom type="mesh" class="collision" pos="-0.00010701 0.058192 0.00955" quat="0 0.707107 0.707107 -0" mesh="pinheader_1x15_p254mm_vertical" material="pinheader_1x15_p254mm_vertical_material"/>
+      <!-- Part lqfp_52_14x14mm_p1mm -->
+      <geom type="mesh" class="visual" pos="-0.00010504 0.061192 0.00965" quat="0 0.707107 0.707107 -0" mesh="lqfp_52_14x14mm_p1mm" material="lqfp_52_14x14mm_p1mm_material"/>
+      <geom type="mesh" class="collision" pos="-0.00010504 0.061192 0.00965" quat="0 0.707107 0.707107 -0" mesh="lqfp_52_14x14mm_p1mm" material="lqfp_52_14x14mm_p1mm_material"/>
+      <!-- Part usb_micro_b_molex_47346_0001 -->
+      <geom type="mesh" class="visual" pos="-0.000105041 0.058192 0.00965766" quat="0 0.707107 0.707107 -0" mesh="usb_micro_b_molex_47346_0001" material="usb_micro_b_molex_47346_0001_material"/>
+      <geom type="mesh" class="collision" pos="-0.000105041 0.058192 0.00965766" quat="0 0.707107 0.707107 -0" mesh="usb_micro_b_molex_47346_0001" material="usb_micro_b_molex_47346_0001_material"/>
+      <!-- Part esp32_30pin_pcb -->
+      <geom type="mesh" class="visual" pos="-0.00010504 0.058192 0.0096" quat="0 0.707107 0.707107 -0" mesh="esp32_30pin_pcb" material="esp32_30pin_pcb_material"/>
+      <geom type="mesh" class="collision" pos="-0.00010504 0.058192 0.0096" quat="0 0.707107 0.707107 -0" mesh="esp32_30pin_pcb" material="esp32_30pin_pcb_material"/>
+      <!-- Part lqfp_32_5x5mm_p05mm -->
+      <geom type="mesh" class="visual" pos="-0.00010504 0.053192 0.00975" quat="0 0.707107 0.707107 -0" mesh="lqfp_32_5x5mm_p05mm" material="lqfp_32_5x5mm_p05mm_material"/>
+      <geom type="mesh" class="collision" pos="-0.00010504 0.053192 0.00975" quat="0 0.707107 0.707107 -0" mesh="lqfp_32_5x5mm_p05mm" material="lqfp_32_5x5mm_p05mm_material"/>
+      <!-- Part pinheader_1x15_p254mm_vertical_1 -->
+      <geom type="mesh" class="visual" pos="-0.00010307 0.058192 0.00955" quat="0 0.707107 0.707107 -0" mesh="pinheader_1x15_p254mm_vertical_1" material="pinheader_1x15_p254mm_vertical_1_material"/>
+      <geom type="mesh" class="collision" pos="-0.00010307 0.058192 0.00955" quat="0 0.707107 0.707107 -0" mesh="pinheader_1x15_p254mm_vertical_1" material="pinheader_1x15_p254mm_vertical_1_material"/>
+      <!-- Link arm_v2_seg1 -->
+      <body name="arm_v2_seg1" pos="-0 -0 0.044" quat="0 1 -0 -0">
+        <!-- Joint from arm_v2_base to arm_v2_seg1 -->
+        <joint axis="0 0 1" name="base" type="hinge" range="-1.5707963267948966 1.53588974175501"/>
+        <inertial pos="0.00112177 0.0211073 -0.0279063" mass="0.146646" fullinertia="0.000143783 9.39183e-05 0.000131513 -2.77634e-06 3.2678e-06 4.51384e-05"/>
+        <!-- Part mg966r_circular -->
+        <geom type="mesh" class="visual" pos="0 0 -0.00575" quat="0.707107 0.707107 -0 -0" mesh="mg966r_circular" material="mg966r_circular_material"/>
+        <geom type="mesh" class="collision" pos="0 0 -0.00575" quat="0.707107 0.707107 -0 -0" mesh="mg966r_circular" material="mg966r_circular_material"/>
+        <!-- Part seg1 -->
+        <geom type="mesh" class="visual" pos="-0 0 -0.0034" quat="0 -1 0 0" mesh="seg1" material="seg1_material"/>
+        <geom type="mesh" class="collision" pos="-0 0 -0.0034" quat="0 -1 0 0" mesh="seg1" material="seg1_material"/>
+        <!-- Part seg1_shell_side_r -->
+        <geom type="mesh" class="visual" pos="0.1596 -0 -0.0074" quat="0 -1 0 0" mesh="seg1_shell_side_r" material="seg1_shell_side_r_material"/>
+        <geom type="mesh" class="collision" pos="0.1596 -0 -0.0074" quat="0 -1 0 0" mesh="seg1_shell_side_r" material="seg1_shell_side_r_material"/>
+        <!-- Part seg1_shell_side_l -->
+        <geom type="mesh" class="visual" pos="0.0324 -0 -0.0074" quat="0 1 -0 -0" mesh="seg1_shell_side_l" material="seg1_shell_side_l_material"/>
+        <geom type="mesh" class="collision" pos="0.0324 -0 -0.0074" quat="0 1 -0 -0" mesh="seg1_shell_side_l" material="seg1_shell_side_l_material"/>
+        <!-- Part mg996r_2 -->
+        <geom type="mesh" class="visual" pos="-0.015994 0.0583491 -0.0474" quat="0.5 -0.5 0.5 -0.5" mesh="mg996r" material="mg996r_material"/>
+        <geom type="mesh" class="collision" pos="-0.015994 0.0583491 -0.0474" quat="0.5 -0.5 0.5 -0.5" mesh="mg996r" material="mg996r_material"/>
+        <!-- Link arm_v2_seg2 -->
+        <body name="arm_v2_seg2" pos="0.024 0.048 -0.0474" quat="0.664463 0.241845 -0.664463 -0.241845">
+          <!-- Joint from arm_v2_seg1 to arm_v2_seg2 -->
+          <joint axis="0 0 1" name="shoulder" type="hinge" range="-2.4434609527920585 0.6981317007977347"/>
+          <inertial pos="0.0045062 -0.0663231 -0.00674248" mass="0.0380571" fullinertia="8.46401e-05 7.63041e-06 9.18924e-05 9.54063e-06 3.21368e-07 -2.72597e-06"/>
+          <!-- Part seg2 -->
+          <geom type="mesh" class="visual" pos="0 -0 -0.0034" quat="0.5 0.5 0.5 -0.5" mesh="seg2" material="seg2_material"/>
+          <geom type="mesh" class="collision" pos="0 -0 -0.0034" quat="0.5 0.5 0.5 -0.5" mesh="seg2" material="seg2_material"/>
+          <!-- Part mg966r_circular_2 -->
+          <geom type="mesh" class="visual" pos="-0 0 -0.00575" quat="0.707107 0.707107 -0 -0" mesh="mg966r_circular" material="mg966r_circular_material"/>
+          <geom type="mesh" class="collision" pos="-0 0 -0.00575" quat="0.707107 0.707107 -0 -0" mesh="mg966r_circular" material="mg966r_circular_material"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <asset>
+    <mesh file="pinheader_1x15_p254mm_vertical.stl"/>
+    <mesh file="base.stl"/>
+    <mesh file="lqfp_32_5x5mm_p05mm.stl"/>
+    <mesh file="usb_micro_b_molex_47346_0001.stl"/>
+    <mesh file="pinheader_1x15_p254mm_vertical_1.stl"/>
+    <mesh file="seg1_shell_side_r.stl"/>
+    <mesh file="lqfp_52_14x14mm_p1mm.stl"/>
+    <mesh file="mg966r_circular.stl"/>
+    <mesh file="seg1_shell_side_l.stl"/>
+    <mesh file="mg996r.stl"/>
+    <mesh file="seg2.stl"/>
+    <mesh file="seg1.stl"/>
+    <mesh file="esp32_30pin_pcb.stl"/>
+    <material name="mg996r_material" rgba="0.301961 0.301961 0.301961 1"/>
+    <material name="base_material" rgba="0.615686 0.811765 0.929412 1"/>
+    <material name="pinheader_1x15_p254mm_vertical_material" rgba="0.858824 0.737255 0.494118 1"/>
+    <material name="lqfp_52_14x14mm_p1mm_material" rgba="0.823529 0.819608 0.780392 1"/>
+    <material name="usb_micro_b_molex_47346_0001_material" rgba="0.823529 0.819608 0.780392 1"/>
+    <material name="esp32_30pin_pcb_material" rgba="0.313725 0.486275 0.411765 1"/>
+    <material name="lqfp_32_5x5mm_p05mm_material" rgba="0.823529 0.819608 0.780392 1"/>
+    <material name="pinheader_1x15_p254mm_vertical_1_material" rgba="0.858824 0.737255 0.494118 1"/>
+    <material name="mg966r_circular_material" rgba="0.439216 0.47451 0.501961 1"/>
+    <material name="seg1_material" rgba="0.615686 0.811765 0.929412 1"/>
+    <material name="seg1_shell_side_r_material" rgba="0.615686 0.811765 0.929412 1"/>
+    <material name="seg1_shell_side_l_material" rgba="0.615686 0.811765 0.929412 1"/>
+    <material name="seg2_material" rgba="0.615686 0.811765 0.929412 1"/>
+  </asset>
+  <actuator>
+    <position class="arm-v2" name="base" joint="base" inheritrange="1"/>
+    <position class="arm-v2" name="shoulder" joint="shoulder" inheritrange="1"/>
+  </actuator>
+  <equality/>
+</mujoco>
