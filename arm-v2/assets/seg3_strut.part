@@ -2,12 +2,12 @@
     "configuration": "default",
     "documentId": "d7eef6374aced10980d655e0",
     "documentMicroversion": "75007d7a47924eae71f10211",
-    "elementId": "4b20bfb54938309ad2c60381",
+    "elementId": "c962b70c41f3edcbd9ab601a",
     "fullConfiguration": "default",
-    "id": "MADz4V00IzUNLw47i",
+    "id": "MBzfGEEn4VzgdW+az",
     "isStandardContent": false,
-    "name": "mg966r_circular <1>",
-    "partId": "JFP",
+    "name": "seg3_strut <1>",
+    "partId": "JPD",
     "suppressed": false,
     "type": "Part"
 }
