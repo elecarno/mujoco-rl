@@ -1,14 +1,5 @@
 {
-    "url": "https://cad.onshape.com/documents/d7eef6374aced10980d655e0/w/a95c1ea2fcec3b2e30db9b5b/e/12aff9f8c85b1001f549e1c3",
-    "robot_name": "arm-v2-asmb",
-    "output_format": "mujoco",
-
-    "joint_properties": {
-        "*": {
-            "actuated": true,
-            "forcerange": 10.0,
-            "frictionloss": 0.5,
-            "limits": [0.5, 1.2]
-        }
-    }
+    "url": "https://cad.onshape.com/documents/d7eef6374aced10980d655e0/w/a95c1ea2fcec3b2e30db9b5b/e/e929eb8ea27c778bb70e0c8e",
+    "robot_name": "arm-v2",
+    "output_format": "mujoco"
 }

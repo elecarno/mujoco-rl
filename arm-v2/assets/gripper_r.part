@@ -1,13 +1,13 @@
 {
     "configuration": "default",
     "documentId": "d7eef6374aced10980d655e0",
-    "documentMicroversion": "58dc8fce0eca3db5202908c3",
-    "elementId": "7e1b983e0287ea5238f37ee9",
+    "documentMicroversion": "616b5ed33dc9070280781647",
+    "elementId": "bb9552cf00630bbac16e8b29",
     "fullConfiguration": "default",
-    "id": "MPrE0LFgnQrF5zgcS",
+    "id": "MMvEHN5MshBBIhVlV",
     "isStandardContent": false,
-    "name": "mg996r <1>",
-    "partId": "JFD",
+    "name": "gripper-r <1>",
+    "partId": "RCCD",
     "suppressed": false,
     "type": "Part"
 }

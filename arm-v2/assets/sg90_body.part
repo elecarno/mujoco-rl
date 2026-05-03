@@ -1,13 +1,13 @@
 {
     "configuration": "default",
     "documentId": "d7eef6374aced10980d655e0",
-    "documentMicroversion": "58dc8fce0eca3db5202908c3",
-    "elementId": "251b9b25ec79f9aa33acb80e",
+    "documentMicroversion": "616b5ed33dc9070280781647",
+    "elementId": "0d01fedf4ce71eabde462ec0",
     "fullConfiguration": "default",
-    "id": "Mjj3lE9hjBKrt3pNG",
+    "id": "M4yiyjANUZlUeTmfh",
     "isStandardContent": false,
-    "name": "leg_upper-r <1>",
-    "partId": "JZD",
+    "name": "sg90_body <1>",
+    "partId": "JFH",
     "suppressed": false,
     "type": "Part"
 }

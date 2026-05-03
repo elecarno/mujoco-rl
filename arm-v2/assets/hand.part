@@ -1,13 +1,13 @@
 {
     "configuration": "default",
     "documentId": "d7eef6374aced10980d655e0",
-    "documentMicroversion": "58dc8fce0eca3db5202908c3",
-    "elementId": "251b9b25ec79f9aa33acb80e",
+    "documentMicroversion": "616b5ed33dc9070280781647",
+    "elementId": "bb9552cf00630bbac16e8b29",
     "fullConfiguration": "default",
-    "id": "MgxYtjjQn6E3kHBL5",
+    "id": "MYKI1QFRvNTUE1OSC",
     "isStandardContent": false,
-    "name": "leg_lower-r <1>",
-    "partId": "JnD",
+    "name": "hand <1>",
+    "partId": "R3BD",
     "suppressed": false,
     "type": "Part"
 }

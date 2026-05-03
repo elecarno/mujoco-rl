@@ -1,13 +1,13 @@
 {
     "configuration": "default",
     "documentId": "d7eef6374aced10980d655e0",
-    "documentMicroversion": "c3bfd888526081e2cc05c7c3",
-    "elementId": "80ce15f447962857bcde504b",
+    "documentMicroversion": "c8fdfd504c65a532e800885a",
+    "elementId": "879825a42234881018186130",
     "fullConfiguration": "default",
-    "id": "MrvIIsfHkYyMyQg32",
+    "id": "MH2p0EgJJ1F5VmBG1",
     "isStandardContent": false,
-    "name": "ESP32-30pin PCB <1>",
-    "partId": "JFX",
+    "name": "seg4 <1>",
+    "partId": "JvD",
     "suppressed": false,
     "type": "Part"
 }
